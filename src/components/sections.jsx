@@ -104,7 +104,14 @@ export function Hero({ d }) {
             </div>
             <div className="hero__meta-cell">
               <span className="mono dim micro">STATUS</span>
-              <span>{d.identity.status}</span>
+              <span>
+                {d.identity.status.split(" · ").map((line, i) => (
+                  <span key={line}>
+                    {i > 0 && <br />}
+                    {line}
+                  </span>
+                ))}
+              </span>
             </div>
           </div>
 
