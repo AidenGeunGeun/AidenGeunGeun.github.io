@@ -93,14 +93,14 @@ export const CV_DATA = {
       advisor: "Independent track · on hold",
       span: "mid-2025 — Jan 2026",
       role: "Independent research",
-      detail: "Physics-informed neural networks as learned surrogates for guidance and trajectory estimation. Ran from mid-2025 to January 2026, then placed on hold.",
+      detail: "PINN-based real-time trajectory generation for 1-v-1 air-to-air engagement — 3-DOF dynamics, receding-horizon inference, PMP/HJB-style constraints. On hold since Jan 2026.",
       tags: ["PINNs", "Trajectory", "ML × Aerospace"],
     },
   ],
 
   timeline: [
     { year: "2026", title: "CTO, Pathtent", detail: "Pre-launch B2B SaaS, building from zero.", kind: "primary" },
-    { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Submission end of May 2026.", kind: "primary" },
+    { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Advanced from Phase 1 (~400 applicants) to Phase 2 (~50). Submission end of May 2026.", kind: "primary" },
     { year: "2025", title: "Hanwha Aerospace Special Award", detail: "ROK Air Force Academy Academic Conference.", kind: "award" },
     { year: "2025", title: "Undergraduate Research Program — KAIST FDCL", detail: "Prof. Chang Hoon Lee. 60Hz range estimation for HUD rendering — hit on conventional hardware, embedded avionics out of scope.", kind: "research" },
     { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Independent ML × aerospace track. Ran mid-2025 to Jan 2026, currently paused.", kind: "research" },
