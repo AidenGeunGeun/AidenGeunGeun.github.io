@@ -59,7 +59,6 @@ export const CV_DATA = {
     { name: "6dofsim", cat: "aerospace", lang: "MATLAB", desc: "Six-degree-of-freedom flight dynamics simulator.", href: "https://github.com/AidenGeunGeun/6dofsim" },
     { name: "Coop_guidance", cat: "aerospace", lang: "MATLAB", desc: "Cooperative guidance law design and analysis.", href: "https://github.com/AidenGeunGeun/Coop_guidance" },
     { name: "GraduateKAIST", cat: "web", lang: "TypeScript", desc: "KAIST graduation planning tool. Live at graduatekaist.vercel.app.", href: "https://github.com/AidenGeunGeun/GraduateKAIST", extra: "graduatekaist.vercel.app" },
-    { name: "blue-pcbang-dropship", cat: "systems", lang: "Python", desc: "Automated dropship workflow system built for a specific market.", href: "https://github.com/AidenGeunGeun/blue-pcbang-dropship" },
     { name: "ZoomToText", cat: "systems", lang: "Python", desc: "Real-time Zoom audio transcription and text extraction pipeline.", href: "https://github.com/AidenGeunGeun/ZoomToText" },
   ],
 
@@ -128,7 +127,7 @@ export const CV_DATA = {
   },
 
   stats: [
-    { value: "17", unit: "", label: "Open-source repos in flight" },
+    { value: "16", unit: "", label: "Open-source repos in flight" },
     { value: "5", unit: "th", label: "Year at KAIST, on semester leave" },
     { value: "3", unit: "", label: "KAIST student orgs led, 2022–2025" },
     { value: "1", unit: "", label: "Hanwha Aerospace Special Award · 2025" },
