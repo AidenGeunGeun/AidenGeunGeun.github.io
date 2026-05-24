@@ -110,7 +110,6 @@ export const CV_DATA = {
     { year: "2023", title: "Declared Aerospace Engineering", detail: "KAIST.", kind: "edu" },
     { year: "2022", title: "Freshman Student Council — Design & Planning", detail: "KAIST.", kind: "org" },
     { year: "2022", title: "Entered KAIST", detail: "Class of 2028 (expected).", kind: "edu" },
-    { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Independent ML × aerospace track. Ran mid-2025 to Jan 2026, currently paused.", kind: "research" },
     { year: "—", title: "Busan Science High School (부산과학고, 17기)", detail: "Graduated.", kind: "edu" },
   ],
 
