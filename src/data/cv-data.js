@@ -6,7 +6,7 @@ export const CV_DATA = {
     location: "Daejeon, KR",
     tz: "Asia/Seoul",
     status: "Building Pathtent · Airbus FYI Phase 2",
-    blurb: "Aerospace engineer from Busan, now based in Daejeon. KAIST Aerospace, expected graduation early 2028. I work across guidance & control, ML research, and token-efficient agent systems.",
+    blurb: "Aerospace engineer from Busan, now based in Daejeon. KAIST Aerospace, expected graduation early 2028. I work across guidance & control and token-efficient agent systems.",
   },
 
   socials: [
