@@ -116,9 +116,6 @@ export function Hero({ d }) {
             <a className="btn btn--ghost" href="https://github.com/AidenGeunGeun" target="_blank" rel="noreferrer">
               <span>GitHub</span>
             </a>
-            <a className="btn btn--ghost" href="/cv-aiden-kim.pdf" download>
-              <span>Download CV</span>
-            </a>
             <a className="btn btn--ghost" href="#projects">
               <span>See work</span>
             </a>
@@ -378,11 +375,6 @@ export function Contact({ d }) {
           <span className="contact__cta mono">COMPOSE →</span>
         </a>
         <div className="contact__side">
-          <a className="contact__row" href="/cv-aiden-kim.pdf" download>
-            <span className="mono micro dim">CV</span>
-            <span className="contact__handle">Download PDF</span>
-            <span className="contact__arrow">↓</span>
-          </a>
           {d.socials
             .filter((s) => s.kind !== "email")
             .map((s) => (

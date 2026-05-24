@@ -20,7 +20,7 @@ npm run preview
 
 ## Content
 
-Site content lives in [`src/data/cv-data.js`](src/data/cv-data.js). The printable CV PDF is in [`public/cv-aiden-kim.pdf`](public/cv-aiden-kim.pdf).
+Site content lives in [`src/data/cv-data.js`](src/data/cv-data.js).
 
 ## Deploy
 
