@@ -103,6 +103,7 @@ export const CV_DATA = {
     { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Submission end of May 2026.", kind: "primary" },
     { year: "2025", title: "Hanwha Aerospace Special Award", detail: "ROK Air Force Academy Academic Conference.", kind: "award" },
     { year: "2025", title: "Undergraduate Research Program — KAIST FDCL", detail: "Prof. Chang Hoon Lee. 60Hz range estimation for HUD rendering — hit on conventional hardware, embedded avionics out of scope.", kind: "research" },
+    { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Independent ML × aerospace track. Ran mid-2025 to Jan 2026, currently paused.", kind: "research" },
     { year: "2024 — 2025", title: "President, ASCEND", detail: "KAIST's fastest-growing & largest student organization during my term.", kind: "org" },
     { year: "2024 — 2025", title: "Undergraduate Research — Cooperative Interception", detail: "Cooperative guidance for multi-interceptor engagement against high-value targets.", kind: "research" },
     { year: "2023", title: "Vice President, Silver Lining", detail: "First international-focused KAIST club to earn official 정동아리 status.", kind: "org" },
