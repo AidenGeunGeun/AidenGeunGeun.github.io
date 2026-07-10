@@ -82,7 +82,7 @@ export function Hero({ d }) {
         <div className="hero__left">
           <div className="hero__topline">
             <StatusDot tone="sky" />
-            <span className="mono dim micro">Daejeon, KR · KAIST &apos;26</span>
+            <span className="mono dim micro">Daejeon, KR · KAIST B.S. &apos;28</span>
           </div>
 
           <h1 className="hero__name">
