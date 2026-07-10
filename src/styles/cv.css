@@ -141,6 +141,7 @@
       margin: 0 auto;
       padding: var(--pad-y) var(--gutter);
       position: relative;
+      scroll-margin-top: 78px;
     }
     .block + .block { padding-top: 0; }
 
@@ -810,4 +811,3 @@
 
     /* don't let any inner element overflow horizontally */
     img, svg { max-width: 100%; }
-  

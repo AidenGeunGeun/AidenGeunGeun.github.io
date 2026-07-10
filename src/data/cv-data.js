@@ -5,8 +5,8 @@ export const CV_DATA = {
     role: "Aerospace Engineer · Agent Infrastructure",
     location: "Daejeon, KR",
     tz: "Asia/Seoul",
-    status: "Building Pathtent · Airbus FYI Phase 2",
-    blurb: "Aerospace engineer from Busan, now based in Daejeon. KAIST Aerospace, expected graduation early 2028. I work across guidance & control and token-efficient agent systems.",
+    status: "Building Pathtent · MLAI Research",
+    blurb: "Aerospace engineer from Busan, now based in Daejeon. KAIST Aerospace, expected graduation early 2028. I work across heterogeneous LLM serving, agent infrastructure, and guidance & control.",
   },
 
   socials: [
@@ -26,12 +26,12 @@ export const CV_DATA = {
       meta: "B2B SaaS",
     },
     {
-      org: "Airbus Fly Your Ideas",
-      role: "Team lead — In Vitro Firmware Red-Teaming",
-      status: "PHASE 2",
+      org: "KAIST MLAI Lab",
+      role: "Undergraduate researcher / intern",
+      status: "RESEARCH",
       statusTone: "sky",
-      detail: "Autonomous firmware verification pipeline for aerospace supply-chain security. Competing for one of three global finalist slots. Mentored by Prof. Yongdae Kim (KAIST SSL).",
-      meta: "Submission · May 2026",
+      detail: "Heterogeneous LLM serving under Prof. Sung Ju Hwang — CUDA prefill to Apple Silicon/MLX decode, with a focus on serving correctness and end-to-end latency and energy evidence.",
+      meta: "2026 — Present",
     },
     {
       org: "KAIST Aerospace Engineering",
@@ -73,6 +73,14 @@ export const CV_DATA = {
 
   research: [
     {
+      title: "Heterogeneous LLM Serving — KAIST MLAI Lab",
+      advisor: "Prof. Sung Ju Hwang",
+      span: "2026 — present",
+      role: "Undergraduate researcher / intern",
+      detail: "Building and evaluating CUDA→MLX prefill/decode disaggregation for LLM serving with SGLang and MLX. Current work focuses on serving correctness and end-to-end latency and energy evidence.",
+      tags: ["LLM Systems", "MLX", "PD Disaggregation"],
+    },
+    {
       title: "KAIST Flight Dynamics & Control Lab (FDCL)",
       advisor: "Prof. Chang Hoon Lee",
       span: "2025",
@@ -100,10 +108,11 @@ export const CV_DATA = {
 
   timeline: [
     { year: "2026", title: "CTO, Pathtent", detail: "Pre-launch B2B SaaS, building from zero.", kind: "primary" },
-    { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Advanced from Phase 1 (~400 applicants) to Phase 2 (~50). Submission end of May 2026.", kind: "primary" },
+    { year: "2026 —", title: "Undergraduate Researcher / Intern — KAIST MLAI Lab", detail: "Heterogeneous LLM serving across CUDA prefill and Apple Silicon/MLX decode under Prof. Sung Ju Hwang.", kind: "research" },
+    { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Reached the top 50 of approximately 400 global teams; did not advance to the three-team final.", kind: "primary" },
     { year: "2025", title: "Hanwha Aerospace Special Award", detail: "ROK Air Force Academy Academic Conference.", kind: "award" },
     { year: "2025", title: "Undergraduate Research Program — KAIST FDCL", detail: "Prof. Chang Hoon Lee. 60Hz range estimation for HUD rendering — hit on conventional hardware, embedded avionics out of scope.", kind: "research" },
-    { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Independent ML × aerospace track. Ran mid-2025 to Jan 2026, currently paused.", kind: "research" },
+    { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Physics-informed neural networks for real-time 1-v-1 engagement trajectory generation (3-DOF, PMP/HJB constraints). On hold since Jan 2026.", kind: "research" },
     { year: "2024 — 2025", title: "President, ASCEND", detail: "KAIST's fastest-growing & largest student organization during my term.", kind: "org" },
     { year: "2024 — 2025", title: "Undergraduate Research — Cooperative Interception", detail: "Cooperative guidance for multi-interceptor engagement against high-value targets.", kind: "research" },
     { year: "2023", title: "Vice President, Silver Lining", detail: "First international-focused KAIST club to earn official 정동아리 status.", kind: "org" },
@@ -121,14 +130,14 @@ export const CV_DATA = {
 
   stack: {
     Languages: ["Python", "TypeScript", "MATLAB", "Bash", "LaTeX"],
-    ML: ["PyTorch", "MLX", "PINNs"],
+    "ML systems": ["SGLang", "MLX", "PD Disaggregation", "PyTorch"],
     Web: ["React", "Next.js", "FastAPI", "PostgreSQL"],
     Aerospace: ["6-DoF Sim", "Guidance Laws", "Real-time HUD"],
   },
 
   stats: [
     { value: "16", unit: "", label: "Open-source repos in flight" },
-    { value: "5", unit: "th", label: "Year at KAIST, on semester leave" },
+    { value: "50", unit: "", label: "Global teams in Airbus FYI Phase 2 (~400 applicants)" },
     { value: "3", unit: "", label: "KAIST student orgs led, 2022–2025" },
     { value: "1", unit: "", label: "Hanwha Aerospace Special Award · 2025" },
   ],
