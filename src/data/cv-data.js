@@ -2,11 +2,11 @@ export const CV_DATA = {
   identity: {
     name: "Aiden Kim",
     nameKo: "김근형",
-    role: "Aerospace Engineer · Agent Infrastructure",
+    role: "ML Systems · LLM Inference",
     location: "Daejeon, KR",
     tz: "Asia/Seoul",
-    status: "Building Pathtent · MLAI Research",
-    blurb: "Aerospace engineer from Busan, now based in Daejeon. KAIST Aerospace, expected graduation early 2028. I work across heterogeneous LLM serving, agent infrastructure, and guidance & control.",
+    status: "MLAI Research",
+    blurb: "KAIST Aerospace undergraduate from Busan, expected to graduate in Feb 2028. I work on ML systems: sparse Mixture-of-Experts inference, LLM serving on Intel Gaudi and Apple Silicon, and measuring efficiency claims carefully.",
   },
 
   socials: [
@@ -18,6 +18,14 @@ export const CV_DATA = {
 
   currently: [
     {
+      org: "KAIST MLAI Lab",
+      role: "Undergraduate researcher",
+      status: "RESEARCH",
+      statusTone: "sky",
+      detail: "Efficient MoE inference under Prof. Sung Ju Hwang. First-author preprint on calibration-free channel selection for MoE decoding (arXiv 2610.37386); earlier, GPU prefill to Apple Silicon/MLX decode serving in SGLang.",
+      meta: "Jun 2026 — Present",
+    },
+    {
       org: "Pathtent",
       role: "Co-founder & CTO",
       status: "PRE-LAUNCH",
@@ -26,24 +34,17 @@ export const CV_DATA = {
       meta: "B2B SaaS",
     },
     {
-      org: "KAIST MLAI Lab",
-      role: "Undergraduate researcher / intern",
-      status: "RESEARCH",
-      statusTone: "sky",
-      detail: "Heterogeneous LLM serving under Prof. Sung Ju Hwang — CUDA prefill to Apple Silicon/MLX decode, with a focus on serving correctness and end-to-end latency and energy evidence.",
-      meta: "2026 — Present",
-    },
-    {
       org: "KAIST Aerospace Engineering",
       role: "Undergraduate · expected Feb 2028",
-      status: "ON LEAVE",
+      status: "ENROLLED",
       statusTone: "muted",
-      detail: "On semester leave. Splitting time across aerospace, ML, and agent infrastructure.",
+      detail: "B.S. in Aerospace Engineering, with research in ML systems and guidance & control.",
       meta: "B.S. · 2022–2028",
     },
   ],
 
   projects: [
+    { name: "calibration-free-moe", cat: "research", lang: "Python", desc: "Code for arXiv 2610.37386: calibration-free channel selection for MoE decoding in vLLM with Triton kernels.", href: "https://github.com/AidenGeunGeun/calibration-free-moe" },
     { name: "recall", cat: "agent", lang: "TypeScript", desc: "Semantic memory for AI agents. Cross-session continuity without bloating context.", href: "https://github.com/AidenGeunGeun/recall" },
     { name: "transcribe-cli", cat: "agent", lang: "TypeScript", desc: "Local document-to-markdown OCR for PDFs, DOCX, images, and more.", href: "https://github.com/AidenGeunGeun/transcribe-cli" },
     { name: "code-intel", cat: "agent", lang: "TypeScript", desc: "Lightweight code intelligence and navigation for agent workflows.", href: "https://github.com/AidenGeunGeun/code-intel" },
@@ -73,19 +74,43 @@ export const CV_DATA = {
 
   research: [
     {
+      title: "Calibration-Free MoE Activation Sparsity — KAIST MLAI Lab",
+      advisor: "Prof. Sung Ju Hwang",
+      span: "Aug 2026 — present",
+      role: "First author · arXiv 2610.37386",
+      detail: "Top-k channel selection over a resident ternary weight sketch with low-rank recovery, no calibration data. Across three post-trained MoE models and three benchmarks, keeps 98.1% of full-model accuracy while reading 17.8% of routed-expert weights; MoE blocks run 1.60–1.90× faster than optimized vLLM at batch 1.",
+      tags: ["MoE", "Sparse Decoding", "vLLM", "Triton"],
+    },
+    {
+      title: "Kimi K3 on Intel Gaudi 2 — DeepAuto.ai",
+      advisor: "Research Engineer (full-time, project-based)",
+      span: "Aug — Sep 2026",
+      role: "Independent Gaudi 2 bring-up",
+      detail: "Brought up a 2.8-trillion-parameter MoE model on Intel Gaudi 2 from scratch: a hub-and-spoke design across 16 accelerators with custom Gaudi kernels for 4-bit expert weights and linear attention. On an expert-pruned checkpoint, reached 8.7 tok/s single-user decode, made MoE prefill 26.6× faster, and cut time to first token from 104.5 s to 9.3 s.",
+      tags: ["Intel Gaudi", "TPC Kernels", "MoE Serving"],
+    },
+    {
       title: "Heterogeneous LLM Serving — KAIST MLAI Lab",
       advisor: "Prof. Sung Ju Hwang",
-      span: "2026 — present",
-      role: "Undergraduate researcher / intern",
-      detail: "Building and evaluating CUDA→MLX prefill/decode disaggregation for LLM serving with SGLang and MLX. Current work focuses on serving correctness and end-to-end latency and energy evidence.",
+      span: "Jun — Jul 2026",
+      role: "Team of four · PD path and benchmarking",
+      detail: "DGX Spark prefill to Mac Studio MLX decode in an SGLang fork with a TCP KV-cache transfer backend. On Qwen3.6-35B-A3B (8,192-token inputs, concurrency 4), aggregate output throughput +38.3% and mean end-to-end latency −34.8% versus one DGX Spark, at the cost of a worse p95 time to first token.",
       tags: ["LLM Systems", "MLX", "PD Disaggregation"],
+    },
+    {
+      title: "Residual RL for Quadrotor Rotor-Loss Recovery",
+      advisor: "With Israel John Peñalosa",
+      span: "Oct 2026",
+      role: "Second author · Future Aerospace Conference 2026",
+      detail: "NMPC teacher distillation plus residual PPO, trained on a GPU-batched simulator (1,450 episodes/s on one RTX 4090). Recovers 65 of 84 stress cases, versus 38 for the prior learned policy and 61 for the NMPC teacher, which is too slow for the 50 ms control period.",
+      tags: ["Reinforcement Learning", "Distillation", "Fault-Tolerant Control"],
     },
     {
       title: "KAIST Flight Dynamics & Control Lab (FDCL)",
       advisor: "Prof. Chang Hoon Lee",
       span: "2025",
       role: "Undergraduate Research Program",
-      detail: "Air-to-air missile range estimation — targeting 60Hz computation of the no-escape zone for HUD rendering. Hit the rate with comfortable margin on conventional hardware; deployment on actual embedded cockpit avionics was out of scope.",
+      detail: "Air-to-air missile reachability: launch-envelope boundaries generated offline and interpolated online across altitude, speed, and pitch, targeting 30 Hz for HUD rendering. Deployment on embedded cockpit avionics was out of scope.",
       tags: ["Guidance & Control", "Real-time", "HUD"],
     },
     {
@@ -107,11 +132,14 @@ export const CV_DATA = {
   ],
 
   timeline: [
+    { year: "2026", title: "arXiv 2610.37386 — first-author preprint", detail: "Channel Selection for Mixture-of-Experts Decoding Needs No Calibration Data (with Sung Ju Hwang).", kind: "research" },
+    { year: "2026", title: "Future Aerospace Conference — rotor-loss recovery paper", detail: "NMPC teacher distillation and residual RL for quadrotor recovery (second author).", kind: "research" },
+    { year: "2026", title: "Research Engineer — DeepAuto.ai", detail: "Full-time, Aug–Sep 2026: Kimi K3 serving on Intel Gaudi 2.", kind: "primary" },
+    { year: "2026 —", title: "Undergraduate Researcher — KAIST MLAI Lab", detail: "Efficient MoE inference and heterogeneous LLM serving under Prof. Sung Ju Hwang.", kind: "research" },
     { year: "2026", title: "CTO, Pathtent", detail: "Pre-launch B2B SaaS, building from zero.", kind: "primary" },
-    { year: "2026 —", title: "Undergraduate Researcher / Intern — KAIST MLAI Lab", detail: "Heterogeneous LLM serving across CUDA prefill and Apple Silicon/MLX decode under Prof. Sung Ju Hwang.", kind: "research" },
-    { year: "2026", title: "Airbus Fly Your Ideas — Phase 2", detail: "Reached the top 50 of approximately 400 global teams; did not advance to the three-team final.", kind: "primary" },
+    { year: "2026", title: "Airbus Fly Your Ideas — Round 2", detail: "Advanced to the mentored Round 2 from 360+ teams worldwide; did not advance to the three-team final.", kind: "primary" },
     { year: "2025", title: "Hanwha Aerospace Special Award", detail: "ROK Air Force Academy Academic Conference.", kind: "award" },
-    { year: "2025", title: "Undergraduate Research Program — KAIST FDCL", detail: "Prof. Chang Hoon Lee. 60Hz range estimation for HUD rendering — hit on conventional hardware, embedded avionics out of scope.", kind: "research" },
+    { year: "2025", title: "Undergraduate Research Program — KAIST FDCL", detail: "Prof. Chang Hoon Lee. Real-time missile reachability for HUD rendering (30 Hz target); embedded avionics out of scope.", kind: "research" },
     { year: "2025 — 2026", title: "PINNs for Aerospace — on hold", detail: "Physics-informed neural networks for real-time 1-v-1 engagement trajectory generation (3-DOF, PMP/HJB constraints). On hold since Jan 2026.", kind: "research" },
     { year: "2024 — 2025", title: "President, ASCEND", detail: "KAIST's fastest-growing & largest student organization during my term.", kind: "org" },
     { year: "2024 — 2025", title: "Undergraduate Research — Cooperative Interception", detail: "Cooperative guidance for multi-interceptor engagement against high-value targets.", kind: "research" },
@@ -130,14 +158,14 @@ export const CV_DATA = {
 
   stack: {
     Languages: ["Python", "TypeScript", "MATLAB", "Bash", "LaTeX"],
-    "ML systems": ["SGLang", "MLX", "PD Disaggregation", "PyTorch"],
+    "ML systems": ["PyTorch", "vLLM", "SGLang", "MLX", "Triton", "Intel Gaudi (TPC)"],
     Web: ["React", "Next.js", "FastAPI", "PostgreSQL"],
     Aerospace: ["6-DoF Sim", "Guidance Laws", "Real-time HUD"],
   },
 
   stats: [
-    { value: "16", unit: "", label: "Open-source repos in flight" },
-    { value: "50", unit: "", label: "Global teams in Airbus FYI Phase 2 (~400 applicants)" },
+    { value: "98", unit: "%", label: "Accuracy kept at 17.8% of MoE expert reads (arXiv 2610.37386)" },
+    { value: "16", unit: "", label: "Gaudi 2 HPUs serving Kimi K3" },
     { value: "3", unit: "", label: "KAIST student orgs led, 2022–2025" },
     { value: "1", unit: "", label: "Hanwha Aerospace Special Award · 2025" },
   ],

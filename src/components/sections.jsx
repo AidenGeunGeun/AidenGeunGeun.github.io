@@ -149,7 +149,7 @@ export function Hero({ d }) {
 export function Currently({ d }) {
   return (
     <section className="block" id="currently" data-screen-label="02 Currently">
-      <SectionHeader index={1} kicker="NOW" title="Currently" sub="Three threads I'm actively pulling on." />
+      <SectionHeader index={1} kicker="NOW" title="Currently" sub="What I am actively working on." />
       <div className="cur-grid">
         {d.currently.map((c, i) => (
           <Reveal key={c.org} delay={i * 80}>
@@ -233,7 +233,7 @@ export function Projects({ d }) {
         index={2}
         kicker="OPEN SOURCE"
         title="Featured work"
-        sub="Token-efficient agent infrastructure, aerospace sim, and the rest."
+        sub="ML systems, agent infrastructure, aerospace sim, and the rest."
       />
 
       <div className="proj-filter">
